@@ -37,7 +37,7 @@ class Products with ChangeNotifier {
     ),
   ];
 
-  var _showFavoritesOnly = false;
+  // var _showFavoritesOnly = false;
 
   List<Product> get items {
     // if (_showFavoritesOnly) {
@@ -60,8 +60,8 @@ class Products with ChangeNotifier {
     return _items.where((element) => element.isFavorite).toList();
   }
 
-  Product findById(String Id) {
-    return _items.firstWhere((element) => element.id == Id);
+  Product findById(String id) {
+    return _items.firstWhere((element) => element.id == id);
   }
 
   void addProduct() {
